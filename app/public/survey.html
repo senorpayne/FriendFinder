@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Survey</h1>
+          <hr>
+          <a href="/"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Back Home</button></a>
+        </div>
+
+ <form>
+            <!--Basic questionnaire-->
+            <h2>About You</h2>
+            <div class="form-group">
+                <label for="userName">Your Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Your name here">
+            </div>
+            <div class="form-group">
+                <label for="imageLink">Your Photo</label>
+                <input type="url" class="form-control" id="imageLink" placeholder="http://yourimage/image.png">
+            </div>
+
+            <h3><strong>Question 1</strong></h3>
+		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+          <h3><strong>Question 2</strong></h3>
+          <h4>Your idea of fun is the beach.</h4>
+           <select data-placeholder="" class="chosen-select" id="q2">
+               <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <h3><strong>Question 3</strong></h3>
+		<h4>You enjoy nature.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <h3><strong>Question 4</strong></h3>
+		<h4>You enjoy pets.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+          <div class="text-center">
+            <a href="/"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-submit"></span>  Submit</button></a>
+        </div>
+  
+</body>
+</html>

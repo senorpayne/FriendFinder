@@ -5,8 +5,8 @@
   <title>Survey</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
 </head>
 <body>
@@ -22,11 +22,11 @@
             <h2>About You</h2>
             <div class="form-group">
                 <label for="userName">Your Name</label>
-                <input type="text" class="form-control" id="userName" placeholder="Your name here">
+                <input type="text" class="form-control" id="name" placeholder="Your name here">
             </div>
             <div class="form-group">
                 <label for="imageLink">Your Photo</label>
-                <input type="url" class="form-control" id="imageLink" placeholder="http://yourimage/image.png">
+                <input type="url" class="form-control" id="photo" placeholder="http://yourimage/image.png">
             </div>
 
             <h3><strong>Question 1</strong></h3>
@@ -71,8 +71,44 @@
       	</select>
 
           <div class="text-center">
-            <a href="/"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-submit"></span>  Submit</button></a>
+            <!-- <a href="/"> -->
+                <button id="submit" type="button" class="btn btn-lg btn-primary"><span ></span>  Submit</button>
+            
+            <!-- </a> -->
         </div>
   
-</body>
-</html>
+        <script src="https://code.jquery.com/jquery.js"></script>
+<script>
+$("#submit").on("click", function(event){
+    event.preventDefault();
+      //if( ($('#name').val().trim() !== "") && ($('#photo').val().trim() !== "") ) {
+          // Create an object for the user's data
+          var userData = {
+              name: $("#name").val(),
+              photo: $("#photo").val(),
+              scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val()]
+            
+            }
+            // var userData = {
+            //   name: "JOLO",
+            //   photo: "photo",
+            //   scores: ["1","2","3","3"]
+            
+            // };
+console.log(userData.name);
+            console.log("userData");
+            $.post("/api/friends", userData, function(data) {
+                console.log(data);
+
+                //your response will be in data...
+            })
+        
+        
+        
+        } ) 
+
+              
+            </script>  
+
+        </body>
+            </html>

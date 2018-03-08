@@ -8,13 +8,7 @@ var friendsArray=[
         5,
         1,
         4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
+        4
       ]
   },
 
@@ -25,13 +19,7 @@ var friendsArray=[
         3,
         3,
         4,
-        0,
-        5,
-        3,
-        2,
-        5,
-        4,
-        1
+        0
       ]
   }
 
@@ -40,3 +28,5 @@ var friendsArray=[
 
 
 ];
+
+module.exports=friendsArray;

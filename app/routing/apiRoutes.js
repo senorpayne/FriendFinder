@@ -18,5 +18,4 @@ console.log(newFriend);
 friendsArray.push(newFriend);
 })
 
-
 }

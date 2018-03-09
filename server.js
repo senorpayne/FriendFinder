@@ -8,6 +8,7 @@ var path = require("path");
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
+  //app.use(express.static('public'))
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,4 +19,3 @@ require('./app/routing/htmlRoutes.js')(app);
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-  
